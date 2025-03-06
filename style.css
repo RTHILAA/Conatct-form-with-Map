@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", serif;
+  background-color: #f1f2f5;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  gap: 32px;
+  background-color: white;
+  padding: 25px;
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-us h2 {
+  color: rgb(0, 191, 255);
+  font-weight: bold;
+  font-size: 4vh;
+}
+
+.contact-us p {
+  font-size: 14px;
+  width: 90%;
+  color: gray;
+  margin: 10px 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 2vh;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  -webkit-transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  -moz-transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  -ms-transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  -o-transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgb(0, 191, 255);
+  box-shadow: 0 0 5px rgba(0, 191, 255, 0.5); 
+}
+
+#btn-submit {
+  background-color: rgb(0, 191, 255);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+#btn-submit:hover {
+  background-color: rgb(0, 160, 214);
+  transform: scale(1.05); 
+}
+
+#btn-submit:active {
+  transform: scale(0.95); 
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.social-media i {
+  font-size: 4vh;
+  color: rgb(0, 191, 255);
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.social-media i:hover {
+  color: rgb(0, 160, 214);
+  transform: translateY(-5px); 
+}
+
+.map {
+  width: 50%;
+  transition: transform 0.3s ease; 
+}
+
+.map:hover {
+  transform: scale(1.02); 
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+}
+
+@media (min-width: 950px) and (max-width: 1150px) {
+  .content {
+    width: 80%;
+    gap: 24px;
+  }
+
+  .contact-us h2 {
+    font-size: 3.5vh;
+  }
+
+  .map {
+    width: 45%;
+  }
+}
+
+@media (max-width: 950px) {
+  .content {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-us h2 {
+    font-size: 3vh;
+  }
+
+  .map {
+    width: 75%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    width: 95%;
+    height: 95%;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .contact-us h2 {
+    font-size: 2.5vh;
+  }
+
+  .contact-us p {
+    font-size: 12px;
+  }
+
+  input,
+  textarea {
+    font-size: 1.8vh;
+  }
+
+  .map {
+    width: 100%;
+    height: 250px;
+  }
+
+  .social-media i {
+    font-size: 3vh;
+  }
+}
